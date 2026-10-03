@@ -1,0 +1,157 @@
+/* assets/css/style.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Elegant Header */
+.top-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 15px 0;
+}
+
+.top-header .institute-names .institute-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  letter-spacing: 0.5px;
+}
+
+.institute-logo {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+  color: #2b2b2b !important;
+  font-weight: 600;
+  padding: 15px 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Main Content Area */
+main {
+  flex: 1;
+  padding: 40px 0;
+}
+
+/* Elegant Cards */
+.card-elegant {
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card-elegant:hover {
+  transform: translateY(-5px);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 60px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--primary-color);
+  color: #e5e7eb;
+  padding: 50px 0 20px;
+}
+
+.footer h5 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 10px;
+}
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  background-color: var(--btn-hover-color);
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Rich Text Formatting (Summernote content areas) */
+.page-content {
+  text-align: justify;
+}
+
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  float: left;            /* Automatically float inserted images to left */
+  margin: 5px 20px 15px 0; /* Add margin to the right side so text wraps nicely */
+}
+
+/* Clearfix for floats in content */
+.page-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Prevent pasted WordPress content columns from breaking the layout */
+.page-content [class*="wp-block-column"] {
+  flex-basis: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+}
+
+.page-content [class*="wp-block-columns"] {
+  display: block !important;
+}
